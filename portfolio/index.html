@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANTOSH PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(2, 7, 23);
+      color: whitesmoke;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      background-color: rgb(35, 4, 67);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    nav ul li a:hover {
+      color: rgb(123, 18, 203);
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+
+    main hr {
+      height: 1px;
+      background: rgb(11, 11, 105);
+      border: 0;
+      margin: 60px 84px;
+    }
+
+    .left {
+      font-size: 1.5rem;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 130px 0;
+    }
+
+    a .firstSection>div {
+      width: 30%;
+    }
+
+    .leftSection {
+      background-color: none;
+      font-size: 3rem;
+    }
+
+    .leftSection .buttons {
+      padding: 10px 0px;
+    }
+
+    .leftSection .btn {
+      font-size: 20px;
+      background-color: purple transparent;
+      padding: 15px 40px;
+      border: none;
+      outline: none;
+      color: #FFF;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 12px;
+    }
+
+    .btn::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    /* glow */
+    .btn::before {
+      content: "";
+      background: linear-gradient(45deg,
+          #FF0000, #FF7300, #FFFB00, #48FF00,
+          #00FFD5, #002BFF, #FF00C8, #FF0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 600%;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      filter: blur(8px);
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+      opacity: 0;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    /* hover */
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:active:after {
+      background: transparent;
+    }
+
+    .btn:active {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .rightSection img {
+      width: 80%;
+    }
+
+    .purple {
+      color: rgb(203, 18, 107);
+    }
+
+    .text-gray {
+      color: gray;
+    }
+
+    #element {
+      color: salmon;
+    }
+
+    .secondSection {
+      max-width: 80vw;
+      margin: auto;
+      height: 80vh;
+    }
+
+    .secondSection h1 {
+      font-size: 1.9rem;
+    }
+
+    .secondSection .box {
+      background: white;
+      width: 80vw;
+      height: 2px;
+      margin: 56px 0;
+      display: flex;
+    }
+
+    .secondSection .vertical {
+      height: 93px;
+      width: 1px;
+      background-color: white;
+      margin: 0 100px;
+    }
+
+    .vertical-title {
+      position: relative;
+      top: 75px;
+      width: 150px;
+    }
+
+    .vertical-desc {
+      position: relative;
+      top: 86px;
+      color: gray;
+      font-size: larger;
+      width: 150px;
+    }
+
+    .sectitle {
+      position: relative;
+      top: 74px;
+      width: 150px;
+    }
+
+    .secdesc {
+      position: relative;
+      top: 10px;
+      color: gray;
+      font-size: 20px;
+      width: 150px;
+    }
+
+    .third {
+      position: relative;
+      top: 72px;
+      width: 110px;
+    }
+
+    .third .sam {
+      position: relative;
+      top: 5px;
+      font-family: italic;
+    }
+
+    .third .college {
+      position: relative;
+      top: 10px;
+      width: 184px;
+      font-size: 27px;
+    }
+
+    .fourth {
+      position: relative;
+      top: 72px;
+      width: 110px;
+    }
+
+    .fourth .skill {
+      position: relative;
+      top: 0px;
+      width: 110px;
+    }
+
+    .fourth .learnedskills {
+      position: relative;
+      top: 10px;
+      width: 166px;
+      font-size: 25px;
+    }
+
+    .image-top {
+      width: 23px;
+      position: relative;
+      top: -32px;
+      left: -9px;
+    }
+
+    footer {
+      background-color: rgb(13, 1, 51);
+
+    }
+
+    .footer {
+      display: flex;
+      padding: 32px 130px;
+      justify-content: space-evenly;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer>div {
+      width: 223px;
+      height: 50px;
+    }
+
+    footer .text-center {
+      text-align: center;
+      color: gray;
+      padding: 15px 0;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">SANTOSH'S PORTFOLIO</div>
+      <div class="right">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/"> Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        Hi guy's this is <span class="purple">Santosh</span>
+
+        <div>I am a passionate</div>
+
+        <span id="element"></span>
+        <div class="buttons">
+          <button class="btn">Download resume</button>
+          <button class="btn">Visit GitHub</button>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="pg.png" alt="" />
+      </div>
+    </section>
+    <hr />
+
+    <section class="secondSection">
+      <span class="text-gray">What i have done so far</span>
+      <h1>Work Experience</h1>
+
+      <div class="box">
+        <div class="vertical">
+          <img class="image-top" src="learner.png" alt="" />
+          <div class="vertical-title">FRONTEND DEVEOPER</div>
+          <div class="vertical-desc">
+            Trying to learn and explore the programming languages
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="si.png" alt="" />
+          <div class="sectitle">
+            Learning the frameworks such Nodejs, threejs and ExpressJs
+            <div class="secdesc">
+              I want to make a impressive websites using these frameworks
+            </div>
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="guru.png" alt="" />
+          <div class="third">
+            <div class="sam">Completed my graduation from</div>
+            <div class="college">Guru Nanak Dev Engineering College</div>
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="images.png" alt="" />
+          <div class="fourth">
+            <div class="skill">MY SKILLS</div>
+            <div class="learnedskills">
+              1. MS OFFICE 2. HTML,css,js 3. PYTHON
+            </div>
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="developer.png" alt="" />
+          <div class="vertical-title">FRONTEND DEVEOPER</div>
+          <div class="vertical-desc">
+            Trying to learn and explore the programming languages
+          </div>
+        </div>
+        <div class="vertical">
+          <img class="image-top" src="si.png" alt="" />
+          <div class="sectitle">
+            Learning the frameworks such Nodejs, threejs and ExpressJs
+            <div class="secdesc">
+              I want to make a impressive websites using these frameworks
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="footer-first">
+        <h3>Santosh's developer portfolio</h3>
+      </div>
+      <div class="footer-0second">
+        <ul>
+          <li> Home</li>
+          <li> About</li>
+          <li> Contact</li>
+          <li> Services</li>
+        </ul>
+      </div>
+      <div class="footer-third">
+        <ul>
+          <li> Home</li>
+          <li> About</li>
+          <li> Contact</li>
+          <li> Services</li>
+        </ul>
+      </div>
+      <div class="footer-fourth">
+        <ul>
+          <li> Home</li>
+          <li> About</li>
+          <li> Contact</li>
+          <li> Services</li>
+        </ul>
+      </div>
+      <div class="text-center">
+        Copyright &#169; www.santoshsportfolio.com | All rights reserved
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed("#element", {
+      strings: ["<i>Programmer.</i>", "<i>coder.</i>", "<i>learner.</i>"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
